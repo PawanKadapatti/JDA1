@@ -2,9 +2,14 @@ apply plugin: 'com.android.application'
 
 android {
     aaptOptions {
-        cruncherEnabled = true
+        cruncherEnabled = false
+    }
+    lintOptions {
+        // I prefer avoiding a build fail if there is any warning, for they are only warnings
+        abortOnError false
     }
 }
+
 
 android {
     compileSdkVersion 25
